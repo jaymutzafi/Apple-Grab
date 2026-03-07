@@ -1,0 +1,828 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.xctest/Contents/MacOS/AppleGrabPackageTests",
+      "packagePath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk",
+      "productName" : "AppleGrabPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.AppleGrab-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/sources",
+      "importPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrab.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabCapture.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabConfig.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabDoctorStatus.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabDoctorViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabOverlayCoordinator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabPlatform.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabTag.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabUtilities.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabViewIntrospection.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AppleGrab",
+      "moduleOutputPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules/AppleGrab.swiftmodule",
+      "objects" : [
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrab.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabCapture.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabConfig.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabController.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabDoctorStatus.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabDoctorViewController.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabOverlayCoordinator.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabPlatform.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabTag.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabUtilities.swift.o",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabViewIntrospection.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/include/AppleGrab-Swift.h",
+        "-swift-version",
+        "6",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "apple_grab_sdk"
+      ],
+      "outputFileMapPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrab.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabCapture.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabConfig.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabDoctorStatus.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabDoctorViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabOverlayCoordinator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabPlatform.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabTag.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabUtilities.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabViewIntrospection.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules/AppleGrab.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrab.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabCapture.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabConfig.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabController.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabDoctorStatus.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabDoctorViewController.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabOverlayCoordinator.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabPlatform.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabTag.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabUtilities.swift",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabViewIntrospection.swift"
+      ],
+      "tempsPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.AppleGrabPackageTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/sources",
+      "importPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules/AppleGrabTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AppleGrabPackageTests",
+      "moduleOutputPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules/AppleGrabPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/include/AppleGrabPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "apple_grab_sdk"
+      ],
+      "outputFileMapPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules/AppleGrabPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.AppleGrabTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/sources",
+      "importPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Tests/AppleGrabTests/AppleGrabTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules/AppleGrab.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AppleGrabTests",
+      "moduleOutputPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules/AppleGrabTests.swiftmodule",
+      "objects" : [
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/AppleGrabTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "6",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "apple_grab_sdk"
+      ],
+      "outputFileMapPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/AppleGrabTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules/AppleGrabTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Tests/AppleGrabTests/AppleGrabTests.swift"
+      ],
+      "tempsPath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "AppleGrab" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AppleGrab",
+      "-package-name",
+      "apple_grab_sdk",
+      "-c",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrab.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabCapture.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabConfig.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabController.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabDoctorStatus.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabDoctorViewController.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabOverlayCoordinator.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabPlatform.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabTag.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabUtilities.swift",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabViewIntrospection.swift",
+      "-I",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/include/AppleGrab-Swift.h",
+      "-swift-version",
+      "6",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "apple_grab_sdk",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "AppleGrabPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AppleGrabPackageTests",
+      "-package-name",
+      "apple_grab_sdk",
+      "-c",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/include/AppleGrabPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "apple_grab_sdk",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "AppleGrabTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "AppleGrabTests",
+      "-package-name",
+      "apple_grab_sdk",
+      "-c",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Tests/AppleGrabTests/AppleGrabTests.swift",
+      "-I",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "6",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "apple_grab_sdk",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "AppleGrab" : [
+
+    ],
+    "AppleGrabPackageTests" : [
+      "AppleGrabTests",
+      "AppleGrab"
+    ],
+    "AppleGrabTests" : [
+      "AppleGrab"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrab.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabCapture.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabConfig.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabDoctorStatus.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabDoctorViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabOverlayCoordinator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabPlatform.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabTag.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabUtilities.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Sources/AppleGrab/AppleGrabViewIntrospection.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/sources"
+    },
+    "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/sources"
+    },
+    "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrab.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabCapture.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabConfig.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabDoctorStatus.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabDoctorViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabOverlayCoordinator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabPlatform.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabTag.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabUtilities.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrab.build/AppleGrabViewIntrospection.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/AppleGrabTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Tests/AppleGrabTests/AppleGrabTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/sources"
+    },
+    "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

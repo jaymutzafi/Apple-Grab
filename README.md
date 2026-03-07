@@ -13,6 +13,28 @@ It is built around Flutter runtime inspection, not browser DOM scraping, so the 
 - `packages/flutter_grab`: the core package you add to a Flutter app
 - `packages/flutter_grab_bridge`: an optional Dart CLI for reading or watching exported captures
 - `examples/flutter_grab_demo`: a realistic demo app showing installation and daily use
+- `packages/apple_grab_sdk`: a native AppKit/UIKit Swift Package for macOS and iOS apps you build yourself
+
+## Native Apple SDK
+
+This repo now also includes a native Swift Package:
+
+- [AppleGrab README](/Users/jaymutzafi/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Flutter%20Grab/packages/apple_grab_sdk/README.md)
+
+Use it for:
+
+- AppKit macOS apps
+- UIKit iOS apps
+- Codex-built Apple apps where you want the same kind of debug-only inspect/copy/export flow
+
+The package provides:
+
+- a debug boot log
+- an obvious active banner
+- a built-in doctor panel
+- inspect/select mode
+- clipboard-first Codex export
+- optional JSON export when you provide an export URL
 
 ## Quickstart
 

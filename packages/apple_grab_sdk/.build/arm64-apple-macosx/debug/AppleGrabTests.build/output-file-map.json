@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/master.swiftdeps"
+  },
+  "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/Tests/AppleGrabTests/AppleGrabTests.swift": {
+    "dependencies": "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/AppleGrabTests.d",
+    "object": "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/AppleGrabTests.swift.o",
+    "swiftmodule": "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/AppleGrabTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/AppleGrabTests.swiftdeps",
+    "diagnostics": "/Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab/packages/apple_grab_sdk/.build/arm64-apple-macosx/debug/AppleGrabTests.build/AppleGrabTests.dia"
+  }
+}
