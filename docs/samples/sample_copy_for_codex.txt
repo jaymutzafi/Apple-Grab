@@ -1,0 +1,29 @@
+Flutter Grab Capture
+Project: flutter_grab_demo
+Route: /dashboard
+
+Selected widget
+- Type: _HeroCard
+- Label: _HeroCard
+- Key: [<'hero-card'>]
+- Bounds: x=32.0, y=104.0, w=420.0, h=180.0
+- Text:
+  - Design faster with Codex
+  - Capture widget context and copy it directly into your prompt.
+
+Explicit tags
+- hero-card
+  Description: Primary value proposition card on the dashboard.
+
+Ancestor chain
+- Scaffold
+- FlutterGrabTag [tag:hero-card]
+
+Theme signals
+- Brightness: light
+- Directionality: ltr
+- Primary color: #FF2563EB
+- Surface color: #FFFFFFFF
+- Secondary color: #FF0F766E
+
+Use this context to reason about or implement a UI change. Preserve route structure, spacing rhythm, and the current visual hierarchy unless the task explicitly changes them.

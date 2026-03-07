@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-03-06T00:00:00.000Z",
+  "app": {
+    "name": "flutter_grab_demo",
+    "platform": "macos",
+    "debugMode": true
+  },
+  "route": {
+    "name": "/dashboard",
+    "runtimeType": "MaterialPageRoute"
+  },
+  "selection": {
+    "widgetType": "_HeroCard",
+    "widgetLabel": "_HeroCard",
+    "key": "[<'hero-card'>]",
+    "debugLabel": "_HeroCard",
+    "localRect": {
+      "left": 0.0,
+      "top": 0.0,
+      "width": 420.0,
+      "height": 180.0
+    },
+    "globalRect": {
+      "left": 32.0,
+      "top": 104.0,
+      "width": 420.0,
+      "height": 180.0
+    },
+    "text": [
+      "Design faster with Codex",
+      "Capture widget context and copy it directly into your prompt."
+    ]
+  },
+  "ancestors": [
+    {
+      "widgetType": "Scaffold",
+      "widgetLabel": "Scaffold",
+      "key": null,
+      "tagName": null
+    },
+    {
+      "widgetType": "FlutterGrabTag",
+      "widgetLabel": "FlutterGrabTag",
+      "key": null,
+      "tagName": "hero-card"
+    }
+  ],
+  "theme": {
+    "brightness": "light",
+    "directionality": "ltr",
+    "primaryColor": "#FF2563EB",
+    "surfaceColor": "#FFFFFFFF",
+    "secondaryColor": "#FF0F766E",
+    "iconSize": 24.0,
+    "bodyFontSize": 14.0,
+    "titleFontSize": 22.0
+  },
+  "semantics": {
+    "labels": [
+      "Design faster with Codex"
+    ],
+    "hints": [],
+    "values": [],
+    "flags": []
+  },
+  "tags": [
+    {
+      "name": "hero-card",
+      "description": "Primary value proposition card on the dashboard.",
+      "tags": [
+        "marketing",
+        "homepage",
+        "priority"
+      ],
+      "notes": "Keep the message direct and the visual hierarchy strong.",
+      "data": {}
+    }
+  ],
+  "sourceHints": {
+    "creationTracked": false,
+    "localCreationTracked": false,
+    "creatorDescription": "_HeroCard"
+  },
+  "artifacts": {
+    "jsonPath": ".dart_tool/flutter_grab/latest_capture.json",
+    "textPath": ".dart_tool/flutter_grab/latest_capture.txt",
+    "screenshot": {
+      "supported": false
+    }
+  },
+  "codexPrompt": "Flutter Grab Capture\nProject: flutter_grab_demo\nRoute: /dashboard\n\nSelected widget\n- Type: _HeroCard\n- Label: _HeroCard\n- Key: [<'hero-card'>]\n- Bounds: x=32.0, y=104.0, w=420.0, h=180.0\n- Text:\n  - Design faster with Codex\n  - Capture widget context and copy it directly into your prompt.\n\nExplicit tags\n- hero-card\n  Description: Primary value proposition card on the dashboard.\n\nAncestor chain\n- Scaffold\n- FlutterGrabTag [tag:hero-card]\n\nTheme signals\n- Brightness: light\n- Directionality: ltr\n- Primary color: #FF2563EB\n- Surface color: #FFFFFFFF\n- Secondary color: #FF0F766E\n\nUse this context to reason about or implement a UI change. Preserve route structure, spacing rhythm, and the current visual hierarchy unless the task explicitly changes them."
+}
