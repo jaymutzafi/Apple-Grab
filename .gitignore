@@ -1,0 +1,19 @@
+# Flutter / Dart
+.dart_tool/
+build/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.claude/
+
+# Flutter generated metadata
+.metadata
+
+# OS noise
+.DS_Store

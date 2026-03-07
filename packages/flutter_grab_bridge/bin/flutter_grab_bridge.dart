@@ -3,7 +3,10 @@ import 'dart:io';
 import 'package:flutter_grab_bridge/flutter_grab_bridge.dart';
 
 Future<void> main(List<String> args) async {
-  final BridgeCommandResult result = await runFlutterGrabBridge(args);
+  final BridgeCommandResult result = await runFlutterGrabBridge(
+    args,
+    onOutput: stdout.writeln,
+  );
   if (result.stdout.isNotEmpty) {
     stdout.writeln(result.stdout);
   }

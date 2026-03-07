@@ -30,11 +30,18 @@ void main() {
   });
 
   test('copies and exports a prepared capture', () async {
-    final Directory tempDirectory = await Directory.systemTemp.createTemp(
-      'flutter_grab_test.',
-    );
     final String exportPath =
-        '${tempDirectory.path}${Platform.pathSeparator}latest_capture.json';
+        '.dart_tool${Platform.pathSeparator}flutter_grab${Platform.pathSeparator}test_capture.json';
+    addTearDown(() async {
+      final File jsonFile = File(exportPath);
+      final File textFile = File(exportPath.replaceAll('.json', '.txt'));
+      if (jsonFile.existsSync()) {
+        await jsonFile.delete();
+      }
+      if (textFile.existsSync()) {
+        await textFile.delete();
+      }
+    });
 
     final FlutterGrabController controller = FlutterGrabController()
       ..configure(FlutterGrabConfig(exportPath: exportPath), enabled: true)

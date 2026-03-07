@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/foundation.dart';
@@ -9,10 +10,12 @@ import 'package:flutter/widgets.dart' as widgets show WidgetsApp;
 import 'config.dart';
 import 'controller.dart';
 import 'models.dart';
+import 'paths.dart';
 import 'scope.dart';
 import 'tag.dart';
 
 const double _edgeHitMargin = 2.0;
+const int _maxAncestorCount = 50;
 
 class FlutterGrab {
   static Widget wrap({required Widget child, FlutterGrabConfig? config}) {
@@ -60,6 +63,12 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
     if (oldWidget.config != widget.config) {
       _controller.configure(widget.config, enabled: true);
     }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -236,15 +245,15 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
                   _ActionChip(
                     icon: Icons.copy_all_rounded,
                     label: 'Copy for Codex',
-                    onPressed: () async {
-                      await _controller.copyForCodex();
+                    onPressed: () {
+                      unawaited(_runAction(_controller.copyForCodex));
                     },
                   ),
                   _ActionChip(
                     icon: Icons.save_alt_rounded,
                     label: 'Export JSON',
-                    onPressed: () async {
-                      await _controller.exportLatest();
+                    onPressed: () {
+                      unawaited(_runAction(_controller.exportLatest));
                     },
                   ),
                   _ActionChip(
@@ -254,7 +263,7 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
                     label: _controller.inspectMode
                         ? 'Exit inspect'
                         : 'Inspect mode',
-                    onPressed: () async {
+                    onPressed: () {
                       _controller.toggleInspectMode();
                     },
                   ),
@@ -415,6 +424,9 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
 
     final List<Element> ancestry = <Element>[];
     element.visitAncestorElements((Element ancestor) {
+      if (ancestry.length >= _maxAncestorCount) {
+        return false;
+      }
       ancestry.add(ancestor);
       return true;
     });
@@ -468,7 +480,7 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
       ),
       artifacts: FlutterGrabArtifacts(
         jsonPath: widget.config.exportPath,
-        textPath: _textPathFor(widget.config.exportPath),
+        textPath: flutterGrabTextPathForJsonPath(widget.config.exportPath),
         screenshotSupported:
             widget.config.screenshotPolicy ==
             FlutterGrabScreenshotPolicy.automatic,
@@ -626,9 +638,13 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
   }
 
   Element? _elementFor(RenderObject renderObject) {
-    final DebugCreator? creator = renderObject.debugCreator as DebugCreator?;
-    final Element? element = creator?.element;
-    if (element == null || element.debugIsDefunct) {
+    final Object? debugCreator = renderObject.debugCreator;
+    if (debugCreator is! DebugCreator) {
+      return null;
+    }
+    final DebugCreator creator = debugCreator;
+    final Element element = creator.element;
+    if (element.debugIsDefunct) {
       return null;
     }
     return element;
@@ -715,13 +731,6 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
     );
   }
 
-  String _textPathFor(String jsonPath) {
-    if (jsonPath.endsWith('.json')) {
-      return '${jsonPath.substring(0, jsonPath.length - 5)}.txt';
-    }
-    return '$jsonPath.txt';
-  }
-
   String _buildCodexPrompt(FlutterGrabCapture capture) {
     final StringBuffer buffer = StringBuffer()
       ..writeln('Flutter Grab Capture')
@@ -786,13 +795,35 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
 
   String _colorToHex(Color color) {
     int channel(double value) => (value * 255.0).round().clamp(0, 255);
+    final String red = channel(color.r).toRadixString(16).padLeft(2, '0');
+    final String green = channel(color.g).toRadixString(16).padLeft(2, '0');
+    final String blue = channel(color.b).toRadixString(16).padLeft(2, '0');
+    final String alpha = channel(color.a).toRadixString(16).padLeft(2, '0');
 
-    return '#'
-            '${channel(color.a).toRadixString(16).padLeft(2, '0')}'
-            '${channel(color.r).toRadixString(16).padLeft(2, '0')}'
-            '${channel(color.g).toRadixString(16).padLeft(2, '0')}'
-            '${channel(color.b).toRadixString(16).padLeft(2, '0')}'
-        .toUpperCase();
+    final String hex = alpha == 'ff'
+        ? '$red$green$blue'
+        : '$red$green$blue$alpha';
+    return '#${hex.toUpperCase()}';
+  }
+
+  Future<void> _runAction(
+    Future<FlutterGrabActionResult> Function() action,
+  ) async {
+    try {
+      await action();
+    } catch (error, stackTrace) {
+      FlutterError.reportError(
+        FlutterErrorDetails(
+          exception: error,
+          stack: stackTrace,
+          library: 'flutter_grab',
+          context: ErrorDescription(
+            'while running a flutter_grab panel action',
+          ),
+        ),
+      );
+      _controller.setMessage('The action failed unexpectedly.');
+    }
   }
 }
 
@@ -867,12 +898,12 @@ class _ActionChip extends StatelessWidget {
 
   final IconData icon;
   final String label;
-  final Future<void> Function() onPressed;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return FilledButton.icon(
-      onPressed: () => onPressed(),
+      onPressed: onPressed,
       style: FilledButton.styleFrom(
         backgroundColor: const Color(0xFF2563EB),
         foregroundColor: Colors.white,

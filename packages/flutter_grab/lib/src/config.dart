@@ -21,4 +21,28 @@ class FlutterGrabConfig {
   final int themeSignalDepth;
   final bool includeSemantics;
   final bool includeRouteInfo;
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        other is FlutterGrabConfig &&
+            other.enableFloatingLauncher == enableFloatingLauncher &&
+            other.enableKeyboardShortcut == enableKeyboardShortcut &&
+            other.exportPath == exportPath &&
+            other.screenshotPolicy == screenshotPolicy &&
+            other.themeSignalDepth == themeSignalDepth &&
+            other.includeSemantics == includeSemantics &&
+            other.includeRouteInfo == includeRouteInfo;
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    enableFloatingLauncher,
+    enableKeyboardShortcut,
+    exportPath,
+    screenshotPolicy,
+    themeSignalDepth,
+    includeSemantics,
+    includeRouteInfo,
+  );
 }

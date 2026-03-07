@@ -19,8 +19,10 @@ class BridgeCommandResult {
 Future<BridgeCommandResult> runFlutterGrabBridge(
   List<String> args, {
   Directory? workingDirectory,
+  void Function(String message)? onOutput,
 }) async {
   final Directory directory = workingDirectory ?? Directory.current;
+  final void Function(String message) emit = onOutput ?? (_) {};
   if (args.isEmpty) {
     return BridgeCommandResult(exitCode: 1, stderr: _usage);
   }
@@ -33,7 +35,7 @@ Future<BridgeCommandResult> runFlutterGrabBridge(
       return _doctor(directory);
     case 'watch':
       final bool asJson = args.contains('--json');
-      return _watch(directory, asJson: asJson);
+      return _watch(directory, asJson: asJson, onOutput: emit);
     default:
       return BridgeCommandResult(exitCode: 1, stderr: _usage);
   }
@@ -93,37 +95,59 @@ Future<BridgeCommandResult> _doctor(Directory directory) async {
 Future<BridgeCommandResult> _watch(
   Directory directory, {
   required bool asJson,
+  required void Function(String message) onOutput,
 }) async {
   final _BridgePaths paths = _BridgePaths.forDirectory(directory);
   final File target = File(asJson ? paths.jsonPath : paths.textPath);
 
-  stdout.writeln(
+  onOutput(
     'Watching ${target.path} for flutter_grab captures. Press Ctrl+C to stop.',
   );
   if (await target.exists()) {
-    stdout.writeln(await target.readAsString());
+    onOutput(await target.readAsString());
   }
 
-  final StreamSubscription<FileSystemEvent> subscription = target.parent
+  final Completer<BridgeCommandResult> done = Completer<BridgeCommandResult>();
+
+  late final StreamSubscription<FileSystemEvent> subscription;
+  late final StreamSubscription<ProcessSignal> signalSubscription;
+
+  Future<void> finish(BridgeCommandResult result) async {
+    await subscription.cancel();
+    await signalSubscription.cancel();
+    if (!done.isCompleted) {
+      done.complete(result);
+    }
+  }
+
+  subscription = target.parent
       .watch()
       .where(
         (FileSystemEvent event) =>
             p.normalize(event.path) == p.normalize(target.path),
       )
-      .listen((FileSystemEvent _) async {
-        if (await target.exists()) {
-          stdout.writeln('---');
-          stdout.writeln(await target.readAsString());
-        }
-      });
+      .listen(
+        (FileSystemEvent _) async {
+          if (await target.exists()) {
+            onOutput('---');
+            onOutput(await target.readAsString());
+          }
+        },
+        onError: (Object error, StackTrace stackTrace) async {
+          await finish(
+            BridgeCommandResult(
+              exitCode: 1,
+              stderr: 'Failed while watching flutter_grab exports: $error',
+            ),
+          );
+        },
+      );
 
-  ProcessSignal.sigint.watch().listen((_) async {
-    await subscription.cancel();
-    exit(0);
+  signalSubscription = ProcessSignal.sigint.watch().listen((_) async {
+    await finish(const BridgeCommandResult(exitCode: 0));
   });
 
-  await Completer<void>().future;
-  return const BridgeCommandResult(exitCode: 0);
+  return done.future;
 }
 
 class _BridgePaths {

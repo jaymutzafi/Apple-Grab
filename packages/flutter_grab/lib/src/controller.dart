@@ -1,10 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:path/path.dart' as p;
-
 import 'config.dart';
 import 'file_export_stub.dart' if (dart.library.io) 'file_export_io.dart';
 import 'models.dart';
+import 'paths.dart';
 
 class FlutterGrabController extends ChangeNotifier {
   FlutterGrabController();
@@ -86,7 +85,7 @@ class FlutterGrabController extends ChangeNotifier {
     }
 
     final String jsonPath = _config.exportPath;
-    final String textPath = _textPathForJsonPath(jsonPath);
+    final String textPath = flutterGrabTextPathForJsonPath(jsonPath);
     final FlutterGrabActionResult result = await writeCaptureFiles(
       jsonPath: jsonPath,
       jsonContents: capture.toPrettyJson(),
@@ -96,13 +95,5 @@ class FlutterGrabController extends ChangeNotifier {
     _lastMessage = result.message;
     notifyListeners();
     return result;
-  }
-
-  String _textPathForJsonPath(String jsonPath) {
-    final String extension = p.extension(jsonPath);
-    if (extension.toLowerCase() == '.json') {
-      return p.setExtension(jsonPath, '.txt');
-    }
-    return '$jsonPath.txt';
   }
 }

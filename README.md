@@ -58,7 +58,18 @@ dependencies:
   flutter_grab: any
 ```
 
-For a standalone app outside this workspace, point the dependency at the package directory or publish the package and use a normal version once you are ready.
+For a standalone app outside this workspace, the recommended setup after uploading this repo to GitHub is:
+
+```yaml
+dependencies:
+  flutter_grab:
+    git:
+      url: https://github.com/YOUR_NAME/flutter_grab.git
+      path: packages/flutter_grab
+      ref: main
+```
+
+That avoids pub.dev and also avoids cross-project local path issues in Codex.
 
 ## Daily usage
 
@@ -108,6 +119,7 @@ The bridge package is optional and does not need to run for the core package to 
 Examples:
 
 ```bash
+dart pub get
 dart run flutter_grab_bridge doctor
 dart run flutter_grab_bridge latest
 dart run flutter_grab_bridge latest --json
