@@ -6,6 +6,13 @@ build/
 .flutter-plugins-dependencies
 pubspec.lock
 
+# SwiftPM
+.build/
+.swift-home/
+
+# Local archive
+.local/
+
 # IDEs
 .idea/
 *.iml

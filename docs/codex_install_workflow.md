@@ -1,6 +1,6 @@
-# Codex install workflow
+# Codex install workflow for AppleGrab
 
-This document defines the simplest reliable way to install `flutter_grab` or `AppleGrab` into another project through Codex.
+This document defines the simplest repeatable way to install `AppleGrab` into another project through Codex.
 
 ## Goal
 
@@ -10,57 +10,45 @@ You should be able to give Codex one of these:
 - a zip file
 - a local folder path
 
-and say “install this into the current project”, without needing to manually explain package wiring every time.
+and say “install AppleGrab into this app”, without needing to explain package wiring each time.
 
-## Rule: direct if possible, vendor if needed
+## Rule
 
-For `AppleGrab`, the repo root is now a valid Swift Package.
+For `AppleGrab`, Codex should:
 
-That means Codex should prefer:
+1. try direct Swift Package installation from the source you gave it
+2. wire the app lifecycle automatically
+3. verify the banner and doctor surface
 
-1. direct package installation from the source you gave it
-2. automatic app wiring
-3. verification
+If direct installation is not appropriate for the target project, Codex should:
 
-If direct installation is not appropriate for the target project, then Codex should:
-
-1. copy or unpack the source into the current project
-2. wire the current project to that local copy
-3. patch the app startup
-4. verify the integration
-
-This keeps the simple path simple, while still preserving a self-contained fallback.
+1. vendor a local copy into the target repo
+2. wire the app to that local copy
+3. verify the integration
 
 ## Accepted source formats
 
-### 1. GitHub URL
+### GitHub URL
 
 Example:
 
 ```text
-https://github.com/jaymutzafi/Flutter-Grab.git
+https://github.com/jaymutzafi/Apple-Grab.git
 ```
 
-For Apple apps, this now works directly because the repo root is a Swift Package exposing the `AppleGrab` product.
+Codex should add that repo as a Swift Package dependency and attach the `AppleGrab` product.
 
-Codex can either:
-
-- add the GitHub repo directly as a Swift Package dependency, or
-- vendor the package into the current repo if you explicitly want a local copy.
-
-### 2. Zip file
+### Zip file
 
 Example:
 
 ```text
-/Users/you/Downloads/Flutter-Grab-main.zip
+/Users/you/Downloads/Apple-Grab-main.zip
 ```
 
-For Apple apps, Codex can unpack the zip and use the unpacked repo root directly as a local Swift Package.
+Codex should unpack it, then add the unpacked repo root as a local Swift Package dependency.
 
-If you want the target repo to own a local copy after installation, Codex should vendor it after unpacking.
-
-### 3. Local folder path
+### Local folder path
 
 Example:
 
@@ -68,86 +56,48 @@ Example:
 /Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab
 ```
 
-For Apple apps, Codex can use that repo root directly as a local Swift Package.
+Codex should add the repo root as a local Swift Package dependency.
 
-If you want the target project to be self-contained after install, Codex should vendor it into the target repo instead of leaving it linked to the original folder.
-
-## Where Codex should put it
-
-### For AppleGrab
-
-Preferred direct install source:
-
-- the repo root GitHub URL
-- the repo root zip
-- the repo root folder path
-
-Fallback vendored destination:
-
-```text
-Packages/AppleGrab
-```
-
-using the contents of:
-
-```text
-packages/apple_grab_sdk
-```
-
-### For flutter_grab
-
-Vendor into:
-
-```text
-packages/flutter_grab
-```
-
-or another repo-local package folder appropriate for the target Flutter workspace.
-
-## How Codex should wire it
-
-### Swift Package app
-
-If the target app already uses `Package.swift`, Codex should:
-
-- for a GitHub URL:
-  - add `.package(url: "https://github.com/jaymutzafi/Flutter-Grab.git", branch: "main")`
-  - add `AppleGrab` as a dependency of the app target
-- for a local folder path or unpacked zip:
-  - add `.package(path: "/path/to/source")` if direct install is acceptable
-- for a vendored install:
-  - place `AppleGrab` at `Packages/AppleGrab`
-  - add `.package(path: "Packages/AppleGrab")`
-  - add `AppleGrab` as a dependency of the app target
-
-### Xcode project app
+## Xcode project app
 
 If the target app is an `.xcodeproj` app, Codex should:
 
 - for a GitHub URL:
   - add the repo as a remote Swift package dependency
   - attach the `AppleGrab` product to the app target
-- for a local folder path or unpacked zip:
+- for a zip or folder path:
   - add it as a local Swift package dependency
   - attach the `AppleGrab` product to the app target
-- for a vendored install:
-  - place `AppleGrab` at `Packages/AppleGrab`
+- if vendoring is requested:
+  - copy it into `Packages/AppleGrab`
   - add that local Swift package dependency
   - attach the `AppleGrab` product to the app target
 
-### Flutter app
+## Swift Package app
 
-For `flutter_grab`, Codex should:
+If the target app already uses `Package.swift`, Codex should:
 
-- vendor the package inside the current repo
-- use a local path dependency inside that repo
-- wrap the app root with `FlutterGrab.wrap(...)`
+- for a GitHub URL:
 
-## What code Codex should add
+```swift
+.package(url: "https://github.com/jaymutzafi/Apple-Grab.git", branch: "main")
+```
+
+- for a local folder path or unpacked zip:
+
+```swift
+.package(path: "/path/to/Apple-Grab")
+```
+
+- then add the target dependency:
+
+```swift
+.product(name: "AppleGrab", package: "AppleGrabKit")
+```
+
+## Code Codex should add
 
 ### AppKit
-
-Codex should install `AppleGrab` after the main window exists:
 
 ```swift
 import AppKit
@@ -165,8 +115,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 ```
 
 ### UIKit
-
-Codex should install `AppleGrab` after the window exists:
 
 ```swift
 import UIKit
@@ -187,82 +135,49 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 ```
 
-### Flutter
-
-Codex should wrap the root app:
-
-```dart
-runApp(
-  FlutterGrab.wrap(
-    child: const MyApp(),
-  ),
-);
-```
-
 ## What Codex should verify
-
-For AppleGrab:
 
 - package dependency resolves
 - app builds
 - debug boot log appears
 - active banner appears
-- doctor surface confirms overlay is mounted
-
-For flutter_grab:
-
-- package resolves
-- app runs in debug
-- active banner appears
 - doctor panel confirms overlay is mounted
-- inspect mode toggles
+- inspect mode can be toggled
 
 ## Recommended user prompt
 
 Use this exact style of request in another project:
 
 ```text
-Install AppleGrab into this app from this source:
+Install AppleGrab into this app from:
 SOURCE_HERE
 
-If direct package installation works, use it.
-If not, vendor it into this repo instead of linking to an external path.
-Then wire it into the app lifecycle, verify it builds, and make sure the active banner and doctor surface work.
+Add it as a Swift Package dependency, wire it into the app lifecycle, and verify that the active banner and doctor surface work.
+If direct package install is not appropriate for this project, vendor it into the repo and wire it locally.
 ```
 
 Examples:
 
 ```text
-Install AppleGrab into this app from this source:
-https://github.com/jaymutzafi/Flutter-Grab.git
+Install AppleGrab into this app from:
+https://github.com/jaymutzafi/Apple-Grab.git
 
-Vendor it into this repo instead of linking to an external path.
-Then wire it into the app lifecycle, verify it builds, and make sure the active banner and doctor surface work.
+Add it as a Swift Package dependency, wire it into the app lifecycle, and verify that the active banner and doctor surface work.
+If direct package install is not appropriate for this project, vendor it into the repo and wire it locally.
 ```
 
 ```text
-Install AppleGrab into this app from this source:
-/Users/jaymutzafi/Downloads/Flutter-Grab-main.zip
+Install AppleGrab into this app from:
+/Users/jaymutzafi/Downloads/Apple-Grab-main.zip
 
-Vendor it into this repo instead of linking to an external path.
-Then wire it into the app lifecycle, verify it builds, and make sure the active banner and doctor surface work.
+Add it as a Swift Package dependency, wire it into the app lifecycle, and verify that the active banner and doctor surface work.
+If direct package install is not appropriate for this project, vendor it into the repo and wire it locally.
 ```
 
 ```text
-Install AppleGrab into this app from this source:
+Install AppleGrab into this app from:
 /Users/jaymutzafi/Library/Mobile Documents/com~apple~CloudDocs/Projects/Flutter Grab
 
-Vendor it into this repo instead of linking to an external path.
-Then wire it into the app lifecycle, verify it builds, and make sure the active banner and doctor surface work.
+Add it as a Swift Package dependency, wire it into the app lifecycle, and verify that the active banner and doctor surface work.
+If direct package install is not appropriate for this project, vendor it into the repo and wire it locally.
 ```
-
-## Why this is the standard workflow
-
-This approach avoids:
-
-- pub.dev assumptions
-- GitHub subdirectory package confusion
-- cross-project sandbox visibility problems
-- future breakage from moving the original source folder
-
-After installation, the target project owns a local copy and Codex can work on it directly.
