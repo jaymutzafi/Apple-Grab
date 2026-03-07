@@ -26,7 +26,25 @@ class DemoApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/': (_) => const DashboardScreen(),
         '/compose': (_) => const ComposeScreen(),
+        '/doctor': (_) => const DoctorScreen(),
       },
+    );
+  }
+}
+
+class DoctorScreen extends StatelessWidget {
+  const DoctorScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Flutter Grab doctor')),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 420),
+          child: const FlutterGrabDoctorCard(),
+        ),
+      ),
     );
   }
 }
@@ -40,6 +58,11 @@ class DashboardScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter Grab Demo'),
         actions: <Widget>[
+          TextButton.icon(
+            onPressed: () => Navigator.of(context).pushNamed('/doctor'),
+            icon: const Icon(Icons.health_and_safety),
+            label: const Text('Doctor'),
+          ),
           TextButton.icon(
             onPressed: () => Navigator.of(context).pushNamed('/compose'),
             icon: const Icon(Icons.edit_note),

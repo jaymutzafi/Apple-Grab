@@ -17,11 +17,17 @@ void main() {
     );
 
     expect(find.byKey(const Key('flutter_grab_launcher')), findsOneWidget);
+    expect(find.text('Flutter Grab active'), findsOneWidget);
 
     final FlutterGrabController controller = FlutterGrabScope.of(
       tester.element(find.byType(Scaffold)),
     );
     expect(controller.inspectMode, isFalse);
+
+    await tester.tap(find.byKey(const Key('flutter_grab_doctor_button')));
+    await tester.pump(const Duration(milliseconds: 100));
+    expect(find.text('Flutter Grab doctor'), findsOneWidget);
+    expect(find.text('Overlay mounted'), findsOneWidget);
 
     await tester.tap(find.byKey(const Key('flutter_grab_launcher')));
     await tester.pump(const Duration(milliseconds: 100));

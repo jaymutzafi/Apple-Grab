@@ -19,9 +19,11 @@ It is built around Flutter runtime inspection, not browser DOM scraping, so the 
 1. Add the package to your Flutter app.
 2. Wrap your app root with `FlutterGrab.wrap(...)`.
 3. Run the app in debug mode.
-4. Click the floating `Flutter Grab` launcher or press `Cmd/Ctrl+Shift+G`.
-5. Hover and click a widget to capture it.
-6. Use `Copy for Codex` or `Export JSON`.
+4. Confirm the yellow `Flutter Grab active` banner appears.
+5. Open the built-in doctor panel if you want to verify the overlay is mounted.
+6. Click the floating `Flutter Grab` launcher or press `Cmd/Ctrl+Shift+G`.
+7. Hover and click a widget to capture it.
+8. Use `Copy for Codex` or `Export JSON`.
 
 Minimal integration:
 
@@ -73,11 +75,21 @@ That avoids pub.dev and also avoids cross-project local path issues in Codex.
 
 ## Daily usage
 
+- Look for the yellow `Flutter Grab active` banner after boot. That is the most obvious signal that the wrapper is active.
+- Open the doctor panel from the banner, or route to a doctor screen in your app, to confirm the overlay is mounted.
 - Toggle inspect mode with the floating launcher or `Cmd/Ctrl+Shift+G`.
 - In inspect mode, hover to preview the target widget on desktop/web.
 - Click to capture the widget and open the context panel.
 - Use `Copy for Codex` to copy the agent-friendly text block.
 - Use `Export JSON` to write the latest capture to `.dart_tool/flutter_grab/latest_capture.json` on supported IO platforms.
+
+For interactive web debugging, prefer:
+
+```bash
+flutter run -d chrome
+```
+
+and avoid `-d web-server` when you want hover, clipboard, and the most natural browser-based debugging loop.
 
 Captured v1 fields include:
 
@@ -140,6 +152,9 @@ What those commands do:
 - Hover does not work:
   - Hover preview is mainly for desktop/web pointer input.
   - On touch devices, tap to select instead.
+- Web debugging feels limited:
+  - Prefer `flutter run -d chrome` over `flutter run -d web-server` for interactive debugging.
+  - `-d web-server` is fine for basic verification, but it is not the best choice for this tool’s browser-style workflow.
 - Export JSON does not create a file:
   - The predictable local export is designed for IO-capable debug runs started from a local project directory.
   - On Flutter Web, use `Copy for Codex`.

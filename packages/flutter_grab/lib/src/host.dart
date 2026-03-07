@@ -9,6 +9,7 @@ import 'package:flutter/widgets.dart' as widgets show WidgetsApp;
 
 import 'config.dart';
 import 'controller.dart';
+import 'doctor.dart';
 import 'models.dart';
 import 'paths.dart';
 import 'scope.dart';
@@ -50,11 +51,15 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
 
   List<RenderObject> _hoveredCandidates = const <RenderObject>[];
   RenderObject? _selectedRenderObject;
+  bool _showDoctorPanel = false;
 
   @override
   void initState() {
     super.initState();
     _controller.configure(widget.config, enabled: true);
+    debugPrint(
+      '[Flutter Grab] active. Use the floating launcher or Cmd/Ctrl+Shift+G to inspect widgets. Open the doctor panel from the banner to confirm the overlay is mounted.',
+    );
   }
 
   @override
@@ -88,12 +93,14 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
                   child: widget.child,
                 ),
               ),
+              _buildActiveBanner(),
               if (_controller.inspectMode) _buildSelectionOverlay(),
               if (widget.config.enableFloatingLauncher)
                 _buildFloatingLauncher(),
               if (_controller.latestCapture
                   case final FlutterGrabCapture capture)
                 _buildCapturePanel(capture),
+              if (_showDoctorPanel) _buildDoctorOverlay(),
             ],
           );
         },
@@ -162,6 +169,58 @@ class _FlutterGrabHostState extends State<_FlutterGrabHost> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildActiveBanner() {
+    return Positioned(
+      left: 20,
+      top: 20,
+      child: Material(
+        elevation: 8,
+        color: const Color(0xFFF59E0B),
+        borderRadius: BorderRadius.circular(18),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              const Icon(Icons.bug_report, color: Color(0xFF111827)),
+              const SizedBox(width: 10),
+              const Text(
+                'Flutter Grab active',
+                style: TextStyle(
+                  color: Color(0xFF111827),
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              const SizedBox(width: 12),
+              TextButton(
+                key: const Key('flutter_grab_doctor_button'),
+                style: TextButton.styleFrom(
+                  foregroundColor: const Color(0xFF111827),
+                  backgroundColor: const Color(0x33FFFFFF),
+                ),
+                onPressed: () {
+                  setState(() {
+                    _showDoctorPanel = !_showDoctorPanel;
+                  });
+                },
+                child: Text(_showDoctorPanel ? 'Hide doctor' : 'Doctor'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDoctorOverlay() {
+    return Positioned(
+      top: 84,
+      left: 20,
+      width: 340,
+      child: FlutterGrabDoctorCard(controller: _controller),
     );
   }
 
