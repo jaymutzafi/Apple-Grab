@@ -20,6 +20,7 @@ It is built around Flutter runtime inspection, not browser DOM scraping, so the 
 This repo now also includes a native Swift Package:
 
 - [AppleGrab README](/Users/jaymutzafi/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Flutter%20Grab/packages/apple_grab_sdk/README.md)
+- [Codex install workflow](/Users/jaymutzafi/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Flutter%20Grab/docs/codex_install_workflow.md)
 
 Use it for:
 
@@ -35,6 +36,33 @@ The package provides:
 - inspect/select mode
 - clipboard-first Codex export
 - optional JSON export when you provide an export URL
+
+Most important change:
+
+- the **repo root is now a valid Swift Package for `AppleGrab`**
+
+That means for macOS/iOS apps you can give Codex any of these:
+
+- `https://github.com/jaymutzafi/Flutter-Grab.git`
+- a zip of this repo
+- the local folder path to this repo
+
+and Codex can add `AppleGrab` directly as a Swift Package dependency without needing a separate repo just for the Apple SDK.
+
+## Cross-project Codex install
+
+If you want Codex to install this into another project from a GitHub URL, zip file, or folder path, use the workflow in:
+
+- [docs/codex_install_workflow.md](/Users/jaymutzafi/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Flutter%20Grab/docs/codex_install_workflow.md)
+
+The short version is:
+
+- give Codex a source
+- let Codex try direct package installation first
+- if that is not appropriate, have Codex vendor it into the current project
+- have Codex wire it into the app automatically
+
+That avoids pub.dev assumptions, cross-project path visibility issues, and fragile external references.
 
 ## Quickstart
 
